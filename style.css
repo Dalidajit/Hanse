@@ -10,6 +10,7 @@
     text-align: center;
     color: #ffedce; /* Ta couleur Crème pour le texte */
 	margin-bottom: 20 px;
+
 }
 
 /* Le contenu à l'intérieur */
@@ -19,6 +20,7 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-family: 'serif'; /* Utilise une police élégante */
+    background-color: ;
 }
 
 .banner-content p {
@@ -48,14 +50,18 @@
 
 <!--image/texte-->
 
+section{
+    display: flex*;
+}
 /* Le conteneur principal */
-.bloc-section {
+.bloc {
     display: flex; /* Active le mode flexible */
     flex-direction: row; /* Met l'image et le texte sur la même ligne (ordi) */
     align-items: center; /* Aligne verticalement le texte avec le milieu de l'image */
     gap: 40px; /* Crée un espace vide de 40px entre l'image et le texte */
     padding: 50px 10%; /* 50px de marge en haut/bas, 10% sur les côtés pour respirer */
     background-color: #ffedce; /* Ta couleur Crème du moodboard */
+     flex: 1; /* Dit à l'image de prendre exactement 50% de la largeur */
 }
 
 /* Le sous-bloc Image */
@@ -92,9 +98,8 @@
 }
 /* --- LE MODE MOBILE --- */
 @media (max-width: 768px) {
-    .bloc-section {
-        flex-direction: column; /* Sur téléphone, on empile : l'image en haut, le texte en bas */
+    .bloc {
+        display: block;
         padding: 30px 5%; /* On réduit les marges pour gagner de la place */
-        text-align: center; /* On centre le texte pour que ce soit plus joli sur petit écran */
     }
 }
